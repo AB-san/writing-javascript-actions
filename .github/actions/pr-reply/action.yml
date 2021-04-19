@@ -4,9 +4,20 @@ description: "Auto thank you reply to the contributor after pr is merged"
 
 
 input:
-GITHUB_TOKEN:
+  GITHUB_TOKEN:
   description: "Github token"
   required: true
+  respondableId:
+    description: The id of the issue or pull request
+    required: true
+  response:
+    description: The response to be left on the issue or pull request
+    required: true
+  author:
+    description: The username of the issue author
+    required: true
+  exemptedAuthors:
+    description: Array of exempt usernames
 
 runs:
   using: "node12"
