@@ -27,7 +27,7 @@ async function run() {
       return;
     }
 
-    const octokit = new github.GitHub(token);
+    const octokit = new github.getOctokit(token);
 
     await octokit.graphql(`
       mutation($respondableId: ID!, $response: String!) {
