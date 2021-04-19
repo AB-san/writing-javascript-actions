@@ -26,6 +26,6 @@ jobs:
           joke: ${{steps.jokes.outputs.joke-output}}
 
       - name: prs-reply
-        uses: ./github/actions/pr-reply
+        uses: ./.github/actions/pr-reply
         with:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}} 
