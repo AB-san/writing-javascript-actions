@@ -1,0 +1,13 @@
+name:  "auto-message after pr merged"
+
+description: "Auto thank you reply to the contributor after pr is merged"
+
+
+input:
+GITHUB_TOKEN:
+  description: "Github token"
+  required: true
+
+runs:
+  using: "node12"
+  main: "index.js"
